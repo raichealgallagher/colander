@@ -1,0 +1,70 @@
+.md-label {
+  display: block;
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding-left: 4px;
+}
+.md-input {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  resize: none;
+}
+.md-div {
+  padding: 0;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.md-div:after,
+.md-div:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, .3);
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.md-div::after {
+  background-color: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+.is-active,
+.is-completed {
+  padding: 15px 0 0 0;
+}
+.is-active::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.is-active .md-label {
+  color: #fff;
+}
+.is-completed .md-label {
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  padding: 0;
+}
+.md-button {
+  border: none;
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin: 35px 0 0 0;
+  cursor: pointer;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
